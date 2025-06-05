@@ -14,7 +14,7 @@ application:
         - /=http://blinko-website:1111/
 services:
     blinko-website:
-        image: docker.1ms.run/blinkospace/blinko:1.0.5
+        image: docker.hlmirror.com/blinkospace/blinko:1.0.5
         environment:
             - NODE_ENV=production
             - NEXTAUTH_URL=https://${LAZYCAT_APP_DOMAIN}
