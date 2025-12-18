@@ -1,0 +1,22 @@
+params:
+  - id: use_custom_domain
+    type: bool
+    name: "whether to use a custom domain"
+    default: false
+    description: "set to true if you want to use your own domain to access the app"
+
+  - id: custom_domain
+    type: string
+    name: "custom domain"
+    optional: true
+    description: "your custom domain for accessing the app(without http or https), leave empty to use default lazycat domain"
+
+locales:
+  zh:
+    use_custom_domain:
+      name: "是否使用自定义域名"
+      description: "设置为true则使用自定义域名访问应用"
+
+    custom_domain:
+      name: "自定义域名"
+      description: "自定义访问应用域名(不带http或https)，留空则使用默认lazycat域名"
