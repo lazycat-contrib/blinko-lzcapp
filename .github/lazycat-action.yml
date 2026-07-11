@@ -1,0 +1,31 @@
+version: 1
+project:
+  root: .
+  build_config: lzc-build.yml
+  package_file: package.yml
+  output: dist/blinko.lpk
+update:
+  strategy: publish
+  allow_downgrade: false
+  version_source:
+    type: image
+    image: blinko
+build:
+  run_buildscript: false
+images:
+  - id: blinko
+    target: service
+    service: blinko-website
+    source: blinkospace/blinko
+    channel: stable
+    tag_regex: '^v?[0-9]+\.[0-9]+\.[0-9]+$'
+    delivery:
+      mode: direct
+stores:
+  official:
+    enabled: false
+  private:
+    enabled: true
+    skip_if_version_exists: true
+    name: Blinko
+    summary: 注重隐私的自托管个人 AI 笔记工具

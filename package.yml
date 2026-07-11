@@ -1,0 +1,19 @@
+package: lazycat.community.app.blinko
+version: 1.7.1
+name: Blinko
+description: An open-source, self-hosted personal AI note tool prioritizing privacy
+min_os_version: 1.5.0
+homepage: https://github.com/blinkospace/blinko
+author: blinkospace
+
+permissions:
+  required:
+    - net.internet
+
+locales:
+  zh:
+    name: Blinko
+    description: 开源、自托管且注重隐私的个人 AI 笔记工具
+  en:
+    name: Blinko
+    description: An open-source, self-hosted personal AI note tool prioritizing privacy
