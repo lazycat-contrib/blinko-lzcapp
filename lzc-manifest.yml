@@ -6,11 +6,11 @@ application:
   upstreams:
     - location: /
       backend: http://blinko-website:1111/
-
 services:
   blinko-website:
     # blinkospace/blinko:1.7.1
-    image: docker.1ms.run/blinkospace/blinko:1.7.1
+    # upstream: blinkospace/blinko:1.8.8
+    image: blinkospace/blinko:1.8.8
     environment:
       - NODE_ENV=production
 {{if .U.use_custom_domain}}
@@ -28,7 +28,6 @@ services:
       start_period: 60s
     depends_on:
       - blinko_db
-
   blinko_db:
     image: registry.lazycat.cloud/czyt/library/postgres:bc75bb4e26564157
     environment:
